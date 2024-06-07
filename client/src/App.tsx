@@ -16,7 +16,7 @@ axios.defaults.withCredentials = true;
 
 function App() {
   return (
-    <div className="app bg-neutral-950">
+    <div className="app bg-black">
       <UserContextProvider>
         <Toaster position="bottom-right" toastOptions={{ duration: 3000 }} />
         <Routes>

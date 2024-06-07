@@ -41,7 +41,7 @@
     /* Sets the thumb color and transparent track */
 }
 
-h1, h2, h3, h4, h5, h6, p, button, label {
+h1, h2, h3, h4, h5, h6, p, button, label, li, a {
     color: white;
 }
 
@@ -53,6 +53,26 @@ h1, h2, h3, h4, h5, h6, p, button, label {
     transition: 0.2s ease;
 }
 
-.checkout-button:hover .icon{
+.checkout-button:hover .icon {
     transform: rotate(-5deg) scale(1.1);
+}
+
+.microtitle {
+    font-size: 18px;
+    color: gray;
+    font-weight: 200;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+.blinking-dot {
+    animation: blink 1.5s infinite ease-in-out;
 }

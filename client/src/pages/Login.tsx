@@ -39,7 +39,7 @@ const Login = () => {
   }
 
   return (
-    <div className="success-page w-screen h-screen flex justify-center items-center bg-neutral-950">
+    <div className="success-page w-screen h-screen flex justify-center items-center bg-black">
       <div className="border border-neutral-800 w-[400px] rounded-xl p-[2rem] flex flex-col gap-4 justify-between items-center">
         <div className="header w-full flex flex-col gap-3">
           <h3 className="text-lg font-semibold">Login</h3>

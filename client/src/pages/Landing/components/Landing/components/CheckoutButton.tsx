@@ -8,7 +8,15 @@ const testPublicStripeKey = import.meta.env.VITE_TEST_STRIPE_PUBLISHABLE_KEY;
 
 const deckIcon = <TbCardsFilled className="icon" color="white" size={"25px"} />;
 
-const CheckoutButton = () => {
+interface CheckoutButtonProps {
+  containsIcon: boolean,
+  icon: any,
+  content: string,
+  width: string,
+  height: string,
+}
+
+const CheckoutButton: React.FC<CheckoutButtonProps> = ({ containsIcon, icon, content, width, height }) => {
   const [loading, setLoading] = useState(false);
 
   const handlePayment = async () => {
@@ -49,25 +57,23 @@ const CheckoutButton = () => {
     <button
       onClick={handlePayment}
       disabled={loading}
-      className="
+      style={{ width, height }}
+      className={`
         checkout-button
-        w-[300px] 
-        h-[50px]
-        px-16
         border border-neutral-800 bg-neutral-900
-        rounded-lg 
-        font-semibold 
-        text-sm 
+        px-4
+        p-2
+        rounded-lg
         transition
         flex
         gap-2
         justify-center
         items-center hover:brightness-105
-      "
+        `} 
     >
       {loading ? (
         <div
-          className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-current border-e-transparent align-[-0.125em] text-surface motion-reduce:animate-[spin_1.5s_linear_infinite] dark:text-white"
+          className="inline-block h-4 w-4 animate-spin rounded-full border-2 border-solid border-current border-e-transparent align-[-0.125em] text-surface motion-reduce:animate-[spin_1.5s_linear_infinite] dark:text-white"
           role="status"
         >
           <span className="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">
@@ -76,8 +82,8 @@ const CheckoutButton = () => {
         </div>
       ) : (
         <div className="flex gap-2 justify-center items-center">
-          <div className="flex justify-center items-center">{deckIcon}</div>
-          <p className="">Get your DevDeck</p>
+          {containsIcon && <div className="flex justify-center items-center">{ icon }</div>}
+          <p className="text-sm font-extralight">{ content }</p>
         </div>
       )}
     </button>
