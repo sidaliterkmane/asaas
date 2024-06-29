@@ -60,7 +60,7 @@ const CheckoutButton: React.FC<CheckoutButtonProps> = ({ containsIcon, icon, con
       style={{ width, height }}
       className={`
         checkout-button
-        border border-neutral-800 bg-neutral-900
+        border border-emerald-500 bg-emerald-800
         px-4
         p-2
         rounded-lg
@@ -68,7 +68,7 @@ const CheckoutButton: React.FC<CheckoutButtonProps> = ({ containsIcon, icon, con
         flex
         gap-2
         justify-center
-        items-center hover:brightness-105
+        items-center hover:bg-emerald-900
         `} 
     >
       {loading ? (
@@ -83,7 +83,7 @@ const CheckoutButton: React.FC<CheckoutButtonProps> = ({ containsIcon, icon, con
       ) : (
         <div className="flex gap-2 justify-center items-center">
           {containsIcon && <div className="flex justify-center items-center">{ icon }</div>}
-          <p className="text-sm font-extralight">{ content }</p>
+          <p className="text-sm font-base">{ content }</p>
         </div>
       )}
     </button>

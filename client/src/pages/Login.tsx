@@ -44,7 +44,7 @@ const Login = () => {
         <div className="header w-full flex flex-col gap-3">
           <h3 className="text-lg font-semibold">Login</h3>
           <p className="paragraph font-light text-sm text-neutral-400">
-            Login to mydevdeck to access and modify your developer portfolios.
+            Log in below to access your dashboard.
           </p>
         </div>
 
@@ -54,7 +54,7 @@ const Login = () => {
           </label>
           <input
             id="email"
-            placeholder="mydevdeck@gmail.com"
+            placeholder="login@asaas.com"
             type="email"
             value={data.email}
             onChange={(e) => setData({ ...data, email: e.target.value })}

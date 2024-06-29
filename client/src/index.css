@@ -47,6 +47,9 @@ h1, h2, h3, h4, h5, h6, p, button, label, li, a {
 
 .paragraph {
     line-height: 1.625;
+    color: gray;
+    font-weight: 200;
+    font-size: 18px;
 }
 
 .icon {
@@ -75,4 +78,19 @@ h1, h2, h3, h4, h5, h6, p, button, label, li, a {
 
 .blinking-dot {
     animation: blink 1.5s infinite ease-in-out;
+}
+
+::selection {
+    background-color: #34D399;
+    /* Tailwind's emerald-400 */
+    color: white;
+    /* Optional: Change the text color within the selection */
+}
+
+.text-gradient-emerald {
+    background: linear-gradient(to bottom right, #b8ffe5, #247d5b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
 }

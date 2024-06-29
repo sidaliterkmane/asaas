@@ -13,12 +13,12 @@ const Success = () => {
       <div className="border border-neutral-800 w-[550px] h-[450px] rounded-xl p-[2rem] flex flex-col justify-between items-center">
         <div className="flex justify-center items-center relative">
           <div className="absolute w-[50px] h-[50px] rounded-full bg-white"></div>
-          <FaCircleCheck size={"60px"} color="#302a3b" className="z-[1]" />
+          <FaCircleCheck size={"60px"} color="#10b981" className="z-[1]" />
         </div>
         <h2 className="text-3xl font-semibold">Congratulations</h2>
         <p className="font-light text-neutral-200 text-center">
           Your payment was successful and you have officially registered to
-          MyDevDeck.
+          the application.
         </p>
 
         <div className="w-full flex flex-col justify-between">
@@ -29,7 +29,7 @@ const Success = () => {
                 We've reached out to you via email with your temporary password.
                 You will have to use it upon the first time you log in the
                 application. You will then be able to set your own password and
-                begin using MyDevDeck.
+                begin using the app.
               </p>
             </div>
 

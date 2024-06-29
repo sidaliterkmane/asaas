@@ -4,16 +4,20 @@ import { useNavigate } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import CheckoutButton from "./components/CheckoutButton";
 import Hero from "./components/Hero";
-import TechStack from "./components/TechStack";
+import FlowChart from "./components/FlowChart";
+import SellingPoints from "./components/SellingPoints/SellingPoints";
+import Pricing from "./components/Pricing/Pricing";
 
 const Landing = () => {
 
   return (
-    <div className="landing w-screen h-screen flex flex-col gap-[250px]">
+    <div className="landing flex flex-col">
       <Navbar />
-      <div className="flex flex-col w-full h-full items-center gap-3">
+      <div className="flex flex-col w-full h-full items-center gap-40">
         <Hero />
-        <TechStack />
+        <FlowChart />
+        <SellingPoints />
+        <Pricing />
       </div>
     </div>
   );
