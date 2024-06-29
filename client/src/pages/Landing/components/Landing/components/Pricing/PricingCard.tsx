@@ -23,7 +23,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
   productName,
   productDescription,
   whatsIncluded,
-  checkoutButtonContent
+  checkoutButtonContent,
 }) => {
   return (
     <div className="rounded-2xl p-px bg-gradient-to-bl from-emerald-500 to-neutral-900 to-40% w-full h-fit">
@@ -40,7 +40,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
           </div>
           <ul className="flex flex-col gap-2">
             <li>
-                <p className="text-emerald-500 spacing">FEATURES</p>
+              <p className="text-emerald-500 spacing">FEATURES</p>
             </li>
             {whatsIncluded.map((item, index) => (
               <li
@@ -57,22 +57,27 @@ const PricingCard: React.FC<PricingCardProps> = ({
             ))}
           </ul>
         </div>
-        <div className="line w-[100%] h-[1px] mt-4 bg-neutral-900 md:w-[1px] md:h-auto md:mt-0">
-
-        </div>
+        <div className="line w-[100%] h-[1px] mt-4 bg-neutral-800 md:w-[1px] md:h-auto md:mt-0"></div>
         <div className="right w-full md:w-[40%] flex flex-col gap-10 justify-between md:pl-6">
-            <div className="price w-full flex flex-col items-end">
-                <p className="text-2xl mr-1 line-through text-emerald-500">{discountedPrice}</p>
-                <h1 className="text-emerald-500 text-8xl">{price}</h1>
-                <p className="text-neutral-200 p-1 px-3 border border-emerald-400 rounded-lg">One Time Payment</p>
-            </div>
-            <CheckoutButton 
-                content={checkoutButtonContent}
-                containsIcon={true}
-                icon={shipIcon}
-                width=""
-                height=""
+          <div className="price w-full flex flex-col items-end">
+            <p className="text-2xl mr-1 line-through text-emerald-500">
+              {discountedPrice}
+            </p>
+            <h1 className="text-emerald-500 text-8xl">{price}</h1>
+            <p className="text-neutral-200 p-1 px-3 border border-emerald-400 rounded-lg">
+              One Time Payment
+            </p>
+          </div>
+          <div className="w-full flex flex-col gap-1">
+            <p className="text-neutral-600 text-sm font-extralight">*Price is shown in {currency}</p>
+            <CheckoutButton
+              content={checkoutButtonContent}
+              containsIcon={true}
+              icon={shipIcon}
+              width="100%"
+              height=""
             />
+          </div>
         </div>
       </div>
     </div>

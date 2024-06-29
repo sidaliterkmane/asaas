@@ -7,6 +7,7 @@ import Hero from "./components/Hero";
 import FlowChart from "./components/FlowChart";
 import SellingPoints from "./components/SellingPoints/SellingPoints";
 import Pricing from "./components/Pricing/Pricing";
+import Faq from "./components/Faq/Faq";
 
 const Landing = () => {
 
@@ -18,6 +19,7 @@ const Landing = () => {
         <FlowChart />
         <SellingPoints />
         <Pricing />
+        <Faq />
       </div>
     </div>
   );
