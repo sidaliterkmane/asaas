@@ -27,7 +27,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
 }) => {
   return (
     <div className="rounded-2xl p-px bg-gradient-to-bl from-emerald-500 to-neutral-900 to-40% w-full h-fit">
-      <div className="bg-neutral-950 p-10 rounded-[calc(1rem-1px)] w-full h-fit flex gap-4 flex-col md:flex-row">
+      <div className="bg-gradient-to-bl from-neutral-900 to-black p-10 rounded-[calc(1rem-1px)] w-full h-fit flex gap-4 flex-col md:flex-row">
         <div className="left w-full md:w-[65%] flex flex-col gap-10">
           <div className="header flex flex-col gap-3">
             <div className="title flex gap-4 items-center">
@@ -36,7 +36,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
               </div>
               <h1 className="text-4xl">{productName}</h1>
             </div>
-            <p className="description paragraph">{productDescription}</p>
+            <p className="text-neutral-500 font-light text-sm md:text-base">{productDescription}</p>
           </div>
           <ul className="flex flex-col gap-2">
             <li>
@@ -63,7 +63,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
             <p className="text-2xl mr-1 line-through text-emerald-500">
               {discountedPrice}
             </p>
-            <h1 className="text-emerald-500 text-8xl">{price}</h1>
+            <h1 className="text-gradient-emerald text-8xl">{price}</h1>
             <p className="text-neutral-200 p-1 px-3 border border-emerald-400 rounded-lg">
               One Time Payment
             </p>

@@ -34,7 +34,7 @@ const Pricing = () => {
               "Database setup & schemas",
               "Lifetime updates",
             ]}
-            checkoutButtonContent="Get Asaas"
+            checkoutButtonContent="Get aSaas"
           />
         </div>
       </div>

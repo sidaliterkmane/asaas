@@ -8,6 +8,7 @@ import FlowChart from "./components/FlowChart";
 import SellingPoints from "./components/SellingPoints/SellingPoints";
 import Pricing from "./components/Pricing/Pricing";
 import Faq from "./components/Faq/Faq";
+import Footer from "./components/Footer/Footer";
 
 const Landing = () => {
 
@@ -20,6 +21,7 @@ const Landing = () => {
         <SellingPoints />
         <Pricing />
         <Faq />
+        <Footer />
       </div>
     </div>
   );

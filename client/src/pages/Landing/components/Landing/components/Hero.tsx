@@ -27,7 +27,7 @@ const Hero = () => {
             <CheckoutButton
               containsIcon={true}
               icon={shipIcon}
-              content="Start building now"
+              content="Get aSaas"
               width="250px"
               height="50px"
             />

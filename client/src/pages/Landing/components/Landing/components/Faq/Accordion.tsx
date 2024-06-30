@@ -25,15 +25,15 @@ const Accordion: React.FC<AccordionProps> = ({ title, content }) => {
     <>
       <div
         onClick={toggleAccordion}
-        className="accordion w-full h-[80px] flex items-center border-t border-neutral-800 transition hover:bg-neutral-950 px-4 cursor-pointer"
+        className="accordion w-full h-[60px] flex items-center border-t border-neutral-800 transition hover:bg-neutral-950 px-4 cursor-pointer"
       >
-        <div className="w-full flex justify-between">
-          <p className="text-white font-light">{title}</p>
+        <div className="w-full flex justify-between items-center">
+          <p className={`transition duration-300 font-light ${open ? "text-emerald-500" : "text-white"}`}>{title}</p>
 
           <CiCirclePlus
             size={"30px"}
             className={`text-emerald-500 transition duration-300 ${
-              open ? "rotate-90" : ""
+              open ? "rotate-45" : ""
             }`}
           />
         </div>

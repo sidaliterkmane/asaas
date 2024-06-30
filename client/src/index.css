@@ -88,7 +88,7 @@ h1, h2, h3, h4, h5, h6, p, button, label, li, a {
 }
 
 .text-gradient-emerald {
-    background: linear-gradient(to bottom right, #b8ffe5, #247d5b);
+    background: linear-gradient(to bottom left, #00ffa2, #006b42);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
